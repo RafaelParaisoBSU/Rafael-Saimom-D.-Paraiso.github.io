@@ -291,6 +291,7 @@ body p {
     background: linear-gradient(gold, goldenrod, orangered);
     -webkit-background-clip: text;
     font-size: 150px;
+    letter-spacing: 50px;
 }
 
 .wrapper {
@@ -479,44 +480,36 @@ input:checked + label .description{
 
 .sequelwrapper {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     background-color: white;
     border-top: 2px solid transparent;
     border-image: linear-gradient(to right, goldenrod, red); 
     border-image-slice: 1; 
     border-width: 5px;
+    flex-direction: row-reverse; 
+    align-items: center;
 }
 
 .sequelwrapper img{
-    width: 750px;
     height: 800px;
     border-radius: 10px;
-    object-fit:cover;
-    margin-right: 8.5%;
-    margin-top: 4%;
-    border: 2px solid transparent;
-    border-image: linear-gradient(to bottom, goldenrod, white, rgb(59, 40, 40)); 
-    border-image-slice: 1; 
-    border-width: 5px;
-    box-shadow: black 5px 5px 5px 5px;
+    object-fit: cover;
+    margin-top: auto; 
 }
 
-.sequelwrapper img:hover{   
+.sequelwrapper img:hover {   
     transform: scale(1.025);
     transition: all 0.4s ease-in-out;
 }
 
 .sequeltext {
-    margin: 10% auto;
     width: 75%;
     color: black;
-    margin-right: 4%;
+    margin: 10% auto;
     margin-left: 8.5%;
-    margin-top: 10%;
+    margin-right: 0%;
 }
+
 
 .sequeltext h1 {
     text-align: center;

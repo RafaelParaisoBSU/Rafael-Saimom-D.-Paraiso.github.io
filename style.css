@@ -2,6 +2,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+}
+
+html {
+    scroll-snap-type: y absolute;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -108,6 +114,9 @@ body p {
 }
 
 .herocontainer {
+    scroll-snap-stop:normal;
+    scroll-snap-align:start;
+    scroll-margin-top:100px;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -227,6 +236,9 @@ body p {
 }
 
 .sectiontitle {
+    scroll-snap-stop:normal;
+    scroll-snap-align:start;
+    scroll-margin-top: 70px;
     background-color: black;
 }
 
@@ -285,6 +297,9 @@ body p {
 }
 
 .wrappertitle h1{
+    scroll-snap-stop:normal;
+    scroll-snap-align:start;
+    scroll-margin-top: 60px;
     margin-top: 3%;
     text-align: center;
     color: transparent;
@@ -407,6 +422,9 @@ input:checked + label .description{
 }
 
 .legendwrapper {
+    scroll-snap-stop:normal;
+    scroll-snap-align:start;
+    scroll-margin-top: 30px;
     margin-top: -5%;
     display: flex;
     justify-content: center;
@@ -432,9 +450,7 @@ input:checked + label .description{
     border: 2px solid transparent;
     border-image: linear-gradient(to bottom, goldenrod, white, rgb(59, 40, 40)); 
     border-image-slice: 1; 
-    border-width: 5px;
-    box-shadow: white -5px 5px 2px 2px;
-}
+    border-width: 5px;}
 
 .legendwrapper img:hover{   
     transform: scale(1.025);
@@ -479,6 +495,8 @@ input:checked + label .description{
 }
 
 .sequelwrapper {
+    scroll-snap-stop:normal;
+    scroll-snap-align:start;
     display: flex;
     height: 100vh;
     background-color: white;

@@ -233,7 +233,7 @@ section {
     display: grid;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 100vh;
     background-image: url('Images/section\ bg.jpg');
     background-size: cover;
     background-position: center;
@@ -248,18 +248,17 @@ section {
 
 .sectiontitle h1 {
     text-align: center;
-    font-size: 120px;
+    font-size: 115px;
     letter-spacing: 40px;
     margin-left: 2%;
     color: transparent;
     background: linear-gradient(darkgoldenrod, white, goldenrod, orangered);
     -webkit-background-clip: text;
-    margin-bottom: -1.5%;
-    margin-top: -1.5%;
 }
 
 
 .videocontent video {
+    margin-top: -17%;
     display: flex;
     min-width: 100%;
     min-height: 100%;
@@ -298,13 +297,13 @@ section {
     background-image: url('Images/section\ bg2.jpeg');
     background-size: cover;
     background-position: center;
+
 }
 
 .wrappertitle h1{
     scroll-snap-stop:normal;
     scroll-snap-align:start;
     scroll-margin-top: 60px;
-    margin-top: 3%;
     text-align: center;
     color: transparent;
     background: linear-gradient(gold, goldenrod, orangered);
@@ -606,16 +605,16 @@ input:checked + label .description{
 
 .transition-fade {
     opacity: 1;
-    transition: 1.5s;
-    transform: translateX(0);
+    transition: 2s;
+    transform: translateY(0);
 }
 
 html.is-animating .transition-fade {
     opacity:1;
-    transform: translateX(100%);
+    transform: translateY(100%);
 }
 
 html.is-leaving .transition-fade {
     opacity: 0;
-    transform: translateX(0);
+    transform: translateY(0);
 }

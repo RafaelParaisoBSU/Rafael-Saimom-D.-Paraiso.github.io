@@ -158,16 +158,16 @@ body p {
 
 .transition-fade {
     opacity: 1;
-    transition: 1.5s;
-    transform: translateX(0);
+    transition: 2s;
+    transform: translateY(0);
 }
 
 html.is-animating .transition-fade {
     opacity:1;
-    transform: translateX(100%);
+    transform: translateY(100%);
 }
 
 html.is-leaving .transition-fade {
     opacity: 0;
-    transform: translateX(0);
+    transform: translateY(0);
 }

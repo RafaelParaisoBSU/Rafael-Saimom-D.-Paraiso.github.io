@@ -509,6 +509,8 @@ input:checked + label .description{
     border-width: 5px;
     flex-direction: row-reverse; 
     align-items: center;
+    justify-content: center; /* Center horizontally */
+
 }
 
 .sequelwrapper img{
@@ -617,4 +619,46 @@ html.is-animating .transition-fade {
 html.is-leaving .transition-fade {
     opacity: 0;
     transform: translateY(0);
+}
+
+.play-button2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10%;;
+    width: 300px;
+    height: 75px;
+    background-image: url(Images/playnow1.png);
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 5px goldenrod;
+}
+
+.play-button2:hover {
+    background-image: url(Images/playnow2.png);
+    transition: 0.5s ease;
+    box-shadow: 0px 0px 5px 5px darkgoldenrod,
+}
+
+.play-button3 {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10%;
+    width: 300px;
+    height: 75px;
+    background-image: url(Images/playnow1.png);
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 5px goldenrod;
+}
+
+.play-button3:hover {
+    background-image: url(Images/playnow2.png);
+    transition: 0.5s ease;
+    box-shadow: 0px 0px 5px 5px darkgoldenrod,
 }

@@ -113,15 +113,13 @@ body p {
     }
 }
 
-section {
-    min-height: 100vh;
-}
 
 .herocontainer {
     scroll-snap-stop:normal;
     scroll-snap-align:start;
-    scroll-margin-top:100px;
-    display: grid;
+    scroll-margin-top:75px;
+    display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -428,7 +426,6 @@ input:checked + label .description{
     scroll-snap-stop:normal;
     scroll-snap-align:start;
     scroll-margin-top: 30px;
-    margin-top: -5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -495,6 +492,27 @@ input:checked + label .description{
     color: transparent;
     background: linear-gradient(red, white,darkred, orangered);
     -webkit-background-clip: text;
+}
+
+.play-button2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10%;;
+    width: 300px;
+    height: 75px;
+    background-image: url(Images/playnow1.png);
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 5px goldenrod;
+}
+
+.play-button2:hover {
+    background-image: url(Images/playnow2.png);
+    transition: 0.5s ease;
+    box-shadow: 0px 0px 5px 5px darkgoldenrod,
 }
 
 .sequelwrapper {
@@ -605,43 +623,6 @@ input:checked + label .description{
     -webkit-background-clip: text;
 }
 
-.transition-fade {
-    opacity: 1;
-    transition: 2s;
-    transform: translateY(0);
-}
-
-html.is-animating .transition-fade {
-    opacity:1;
-    transform: translateY(100%);
-}
-
-html.is-leaving .transition-fade {
-    opacity: 0;
-    transform: translateY(0);
-}
-
-.play-button2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    margin-top: 10%;;
-    width: 300px;
-    height: 75px;
-    background-image: url(Images/playnow1.png);
-    background-size: cover;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0px 0px 5px 5px goldenrod;
-}
-
-.play-button2:hover {
-    background-image: url(Images/playnow2.png);
-    transition: 0.5s ease;
-    box-shadow: 0px 0px 5px 5px darkgoldenrod,
-}
-
 .play-button3 {
     display: grid;
     align-items: center;
@@ -662,3 +643,26 @@ html.is-leaving .transition-fade {
     transition: 0.5s ease;
     box-shadow: 0px 0px 5px 5px darkgoldenrod,
 }
+
+.transition-fade {
+    opacity: 1;
+    transition: 2s;
+    transform: translateY(0);
+}
+
+html.is-animating .transition-fade {
+    opacity:1;
+    transform: translateY(100%);
+}
+
+html.is-leaving .transition-fade {
+    opacity: 0;
+    transform: translateY(0);
+}
+
+html.is-rendering .transition-fade {
+    opacity: 1;
+    transform: translateY(100%);
+}
+
+

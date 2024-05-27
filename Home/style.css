@@ -527,7 +527,7 @@ input:checked + label .description{
     border-width: 5px;
     flex-direction: row-reverse; 
     align-items: center;
-    justify-content: center; /* Center horizontally */
+    justify-content: center; 
 
 }
 
@@ -540,11 +540,6 @@ input:checked + label .description{
     background-size: cover;
     z-index: 1;
     animation: glitch 2s infinite steps(1);
-}
-
-.sequelwrapper img:hover {   
-    transform: scale(1.025);
-    transition: all 0.4s ease-in-out;
 }
 
 @keyframes glitch {
@@ -666,3 +661,106 @@ html.is-rendering .transition-fade {
 }
 
 
+.footer-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-stop:normal;
+    scroll-snap-align:start;
+    width: 100%;
+    position: relative;
+}
+
+.footertext {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white; 
+    width: 80%; 
+    padding: 10px; 
+    margin-bottom: 10px;
+}
+
+.footerimages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerimages img {
+    margin: 20px;
+    margin-top: 40px;
+    width: 200px;
+    height: 100px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 100%;
+}
+
+.socials a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socials a:hover {
+    background-color: darkgoldenrod;
+    transition: 0.5s;
+}
+
+.socials a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+.footerlinks {
+    margin: 10px 0;
+}
+
+.footerlinks ul{
+    display: flex;
+    justify-content: center;
+}
+
+.footerlinks ul li a{
+    font-family: Bebas Neue;
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 2em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerlinks ul li a:hover{
+    opacity: 1;
+    color: goldenrod;
+}
+
+.footerbottom {
+    background-color: rgb(35, 35, 35);
+    padding: 10px;
+    text-align: center;
+}
+
+.footerbottom p {
+    color: white;
+}
+
+.designer {
+    letter-spacing: 1px;
+    font-weight: 24px;
+    color: goldenrod;
+}

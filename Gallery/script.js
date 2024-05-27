@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateScaleAndPositon() {
         slides.forEach((slide) => {
             const rect = slide.getBoundingClientRect();
-            const centerPostion = (rect.left + rect.right) / 3.5;
+            const centerPostion = (rect.left + rect.right) / 4;
             const distanceFromCenter = centerPostion - window.innerWidth / 2;
 
             let scale, offsetX;

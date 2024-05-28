@@ -397,102 +397,138 @@ body p {
 
 }
 
-.play-button2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    margin-top: 10%;;
-    width: 300px;
-    height: 75px;
-    background-image: url(Images/playnow1.png);
-    background-size: cover;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0px 0px 5px 5px goldenrod;
-}
-
-.play-button2:hover {
-    background-image: url(Images/playnow2.png);
-    transition: 0.5s ease;
-    box-shadow: 0px 0px 5px 5px darkgoldenrod,
-}
-
-.sequelwrapper {
-    position: relative;
+.pilgrimcontent {
     scroll-snap-stop:normal;
     scroll-snap-align:start;
-    display: flex;
+    text-align: center;
+    display: grid;
+    place-items: center;
     height: 100vh;
-    background-color: white;
-    flex-direction: row-reverse; 
-    align-items: center;
-    justify-content: center; 
-
+    position: relative;
+    z-index: 999;
+    margin-right: 25%;
 }
 
-.sequelwrapper img{
-    height: 800px;
-    border-radius: 10px;
-    object-fit: cover;
-    margin-top: auto; 
-    background: url('Images/sequel.png');
-    background-size: cover;
-    z-index: 1;
-    animation: glitch 2s infinite steps(1);
-}
-
-.sequelwrapper img:hover {   
-    transform: scale(1.025);
-    transition: all 0.4s ease-in-out;
-}
-
-.sequeltext {
-    width: 75%;
-    color: black;
-    margin: 10% auto;
-    margin-left: 8.5%;
-    margin-right: 0%;
-}
-
-
-.sequeltext h1 {
-    text-align: center;
-    font-size: 100px;
-    margin-bottom: -5%;
-}
-
-.sequeltext h2 {
-    text-align: center;
-    font-size: 80px;
-    margin-bottom: 2%;
-}
-
-.sequeltext h3 {
-    text-align: center;
-    font-size: 50px;
-    margin-bottom: 2%;
-}
-
-.sequeltext p {
-    text-align: justify;
-    text-align-last: center;
-    font-size: 20px;
-    margin-bottom: 2%;
-}
-
-.sequeltext b {
+.pilgrimcontent h1{
+    font-size: 200px;
     color: transparent;
-    background: linear-gradient(darkred, red, rgb(218, 218, 218), red, darkred);
+    background: -webkit-linear-gradient(darkviolet, violet, purple, darkviolet);
     -webkit-background-clip: text;
+    text-shadow: 0px 0px 200px white;
+    margin-bottom: -15%;
+    margin-top: -15%;
 }
+
+
+.pilgrimcontent h3{
+    font-size: 70px;
+    color: transparent;
+    background: -webkit-linear-gradient(darkgoldenrod, gold, goldenrod, darkgoldenrod);
+    -webkit-background-clip: text;
+    text-shadow: 0px 0px 100px darkgoldenrod;
+}
+
+.pilgrimcontent p{
+    width: 75%;
+    color: white;
+    margin: auto;
+    line-height: 1.9;
+    font-size: 24px;
+    font-weight: bolder;
+    text-shadow: 0px 0px 20px black;
+}
+
+#spike-img {
+    position: absolute;
+    top: 0;
+    right: 0; 
+    margin-right: -35%;
+}
+
+.pilgrimslider {
+    list-style: none;
+    margin-top: 0;
+}
+
+.pilgrimslider,
+.pilgrimslider::after{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    top: 200vh;
+    left: 0;
+}
+
+.pilgrimslider li span {
+    width: 100vw;
+    height: 100vh;
+    color: transparent;
+    position: absolute;
+    top: 200;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: pilgrim 15s infinite 0s;
+}
+
+.pilgrimslider li:nth-child(1) span{
+    background-image: url(Images/pilgrim1.jpg);
+    opacity: 1;
+}
+
+.pilgrimslider li:nth-child(2) span{
+    background-image: url(Images/pilgrim2.jpg);
+    animation-delay: 15s;
+}
+
+
+
+@keyframes pilgrim {
+0%{
+    opacity: 0;
+}
+
+8%{
+    opacity: 1;
+    transform: scale(1);
+}
+
+17%{
+    opacity: 1;
+    transform: scale(1);
+}
+
+25%{
+    opacity: 1;
+    transform: scale(1);
+}
+
+50%{
+    opacity: 1;
+    transform: scale(1);
+}
+
+75%{
+    opacity: 0;
+    transform: scale(0.975);
+}
+
+100% {
+    opacity: 0;
+}
+
+}
+
 
 .play-button3 {
     display: grid;
     align-items: center;
     justify-content: center;
-    margin: auto;
-    margin-top: 10%;
+    margin-top: -5%;
     width: 300px;
     height: 75px;
     background-image: url(Images/playnow1.png);

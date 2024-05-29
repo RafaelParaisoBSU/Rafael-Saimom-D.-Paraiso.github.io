@@ -569,6 +569,7 @@ html.is-rendering .transition-fade {
     scroll-snap-align:start;
     width: 100%;
     position: relative;
+    z-index: 9999;
 }
 
 .footertext {

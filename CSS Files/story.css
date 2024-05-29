@@ -442,6 +442,7 @@ body p {
 
 #spike-img {
     position: absolute;
+    height: 100%;
     top: 0;
     right: 0; 
     margin-right: -35%;

@@ -201,8 +201,8 @@ body p {
 
 /* Navigation buttons styles */
 .buttons {
-    position: absolute;
-    top: 800px;
+    position: relative;
+    margin-top: 75vh;
     display: flex;
     gap: 20px;
 }
@@ -276,7 +276,7 @@ body p {
 /* Fade-in animation for first slide content */
 .slider .slides:nth-child(1) .content {
     opacity: 1;
-    transform: translateY(-150px);
+    transform: translateY(-200px);
     transition-delay: 0.5s;
 }
 

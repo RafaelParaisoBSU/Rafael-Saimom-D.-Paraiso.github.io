@@ -1,16 +1,17 @@
+/* Universal Styles */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 
+/* HTML Styles */
 html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
 
-
+/* Body Styles */
 body {
     margin: 0;
     height: 88vh;
@@ -22,30 +23,34 @@ body {
     object-fit: cover;
 }
 
-body h1, h2, h3 ,h4, h5 {
+/* Heading Styles */
+body h1, h2, h3, h4, h5 {
     font-family: "Bebas Neue", sans-serif;
 }
 
+/* Paragraph Styles */
 body p {
-    font-family:'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
-::-webkit-scrollbar{
+/* Scrollbar Customization */
+::-webkit-scrollbar {
     width: 10px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background: rgb(85, 85, 85);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient( orangered,gold, darkgoldenrod);
+    background: linear-gradient(orangered, gold, darkgoldenrod);
     border-radius: 50px;
 }
 
+/* Navbar Styles */
 .navbar {
-    scroll-snap-stop:normal;
-    scroll-snap-align:start;
+    scroll-snap-stop: normal;
+    scroll-snap-align: start;
     background-color: black;
     display: flex;
     align-items: center;
@@ -61,6 +66,7 @@ body p {
     display: flex;
 }
 
+/* Navbar Link Styles */
 .navbar a {
     font-family: "Bebas Neue", sans-serif;
     color: white;
@@ -73,10 +79,12 @@ body p {
     text-align: center;
 }
 
+/* Navbar Logo Styling */
 .navbar .logo-image {
     margin-left: 20px;
 }
 
+/* Navbar Link Hover Effects */
 .navbar a:hover {
     font-weight: bold;
     background: -webkit-linear-gradient(orangered, gold, darkgoldenrod);
@@ -99,42 +107,47 @@ body p {
     width: 95%;
 }
 
-.navbar span{
+/* Navbar Gradient Animation */
+.navbar span {
     position: absolute;
     bottom: 0;
     height: 5px;
     width: 1000px;
-    background: linear-gradient(90deg , transparent , goldenrod);
+    background: linear-gradient(90deg, transparent, goldenrod);
     animation: animate 2s infinite linear;
-
 }
 
+/* Keyframes for Gradient Animation */
 @keyframes animate {
-    0%{
+    0% {
         left: 0;
         transform: translate(-100%);
     }
-    100%{
+    100% {
         left: 100%;
         transform: translate(0%);
     }
 }
 
+/* Contact Section Styles */
 .contact {
     width: 80%;
     margin: 50px auto;
 }
 
+/* Contact Box Styling */
 .contact-box {
     background-color: grey;
     display: flex;
 }
 
+/* Contact Left Column */
 .contact-left {
     flex-basis: 60%;
     padding: 40px 60px;
 }
 
+/* Contact Right Column */
 .contact-right {
     flex-basis: 40%;
     padding: 40px;
@@ -142,26 +155,30 @@ body p {
     color: black;
 }
 
+/* Main Heading Styles */
 h1 {
     margin-top: -40px;
     font-size: 100px;
     color: white;
 }
 
-h1 b{
+/* Bold Gradient Text */
+h1 b {
     color: transparent;
-    background: linear-gradient(black, darkred,red, darkred, black);
+    background: linear-gradient(black, darkred, red, darkred, black);
     -webkit-background-clip: text;
 }
 
+/* Contact Left Heading */
 .contact-left h3 {
     color: transparent;
-    background: linear-gradient(black, goldenrod,gold, goldenrod, black);
+    background: linear-gradient(black, goldenrod, gold, goldenrod, black);
     -webkit-background-clip: text;
     font-weight: bold;
     font-size: 50px;
 }
 
+/* Contact Paragraph Styles */
 .contact p {
     margin-bottom: 20px;
     font-size: 25px;
@@ -169,22 +186,26 @@ h1 b{
     font-weight: bold;
 }
 
+/* Input Row and Group Styles */
 .input-row .input-group {
     flex-basis: 45%;
 }
 
+/* Input Field Styles */
 input {
     width: 100%;
     height: 40px;
-    border:none;
+    border: none;
     outline: none;
     border-bottom: 1px solid black;
 }
 
+/* Input Placeholder Styling */
 input::placeholder {
     text-indent: 10px;
 }
 
+/* Textarea Styles */
 textarea {
     width: 100%;
     border: 1px solid black;
@@ -192,6 +213,7 @@ textarea {
     padding: 10px;
 }
 
+/* Label Styling */
 label {
     margin: 6px auto;
     font-weight: bolder;
@@ -200,6 +222,7 @@ label {
     font-family: Montserrat;
 }
 
+/* Button Styles */
 button {
     background: goldenrod;
     width: 100px;
@@ -215,6 +238,7 @@ button {
     cursor: pointer;
 }
 
+/* Button Hover Effects */
 button:hover {
     background-color: darkred;
     color: white;
@@ -222,15 +246,17 @@ button:hover {
     transition: 0.5s ease-in-out;
 }
 
-.contact-right h3{
+/* Contact Right Heading */
+.contact-right h3 {
     color: transparent;
-    background: linear-gradient(black, goldenrod,gold, goldenrod, black);
+    background: linear-gradient(black, goldenrod, gold, goldenrod, black);
     -webkit-background-clip: text;
     font-weight: bold;
     margin-bottom: 5px;
     font-size: 50px;
 }
 
+/* Table Cell Padding */
 tr td:first-child {
     padding-right: 40px;
 }
@@ -240,8 +266,9 @@ tr td {
     font-family: Montserrat;
 }
 
+/* Animation States */
 html.is-animating .transition-fade {
-    opacity:1;
+    opacity: 1;
     transform: translateY(100%);
 }
 
@@ -255,28 +282,30 @@ html.is-rendering .transition-fade {
     transform: translateY(100%);
 }
 
+/* Footer Main Styles */
 .footer-main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    scroll-snap-stop:normal;
-    scroll-snap-align:start;
+    scroll-snap-stop: normal;
+    scroll-snap-align: start;
     width: 100%;
     position: relative;
-
 }
 
+/* Footer Text Styles */
 .footertext {
     display: flex;
     justify-content: center;
     text-align: center;
-    color: white; 
-    width: 80%; 
-    padding: 10px; 
+    color: white;
+    width: 80%;
+    padding: 10px;
     margin-bottom: 10px;
 }
 
+/* Footer Image Container */
 .footerimages {
     display: flex;
     justify-content: center;
@@ -284,17 +313,20 @@ html.is-rendering .transition-fade {
     border-top: 2px solid goldenrod;
 }
 
+/* Footer Image Styles */
 .footerimages img {
     width: 200px;
     height: 100px;
 }
 
+/* Social Media Links Styles */
 .socials {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
 }
 
+/* Social Media Link Styles */
 .socials a {
     text-decoration: none;
     padding: 20px;
@@ -303,32 +335,37 @@ html.is-rendering .transition-fade {
     border-radius: 100%;
 }
 
-.socials a i{
+/* Social Media Icons */
+.socials a i {
     font-size: 2em;
     color: black;
     opacity: 0.9;
 }
 
+/* Social Media Link Hover Effects */
 .socials a:hover {
     background-color: darkgoldenrod;
     transition: 0.5s;
 }
 
-.socials a:hover i{
+.socials a:hover i {
     color: white;
     transition: 0.5s;
 }
 
+/* Footer Links Container */
 .footerlinks {
     margin: 10px 0;
 }
 
-.footerlinks ul{
+/* Footer Links List */
+.footerlinks ul {
     display: flex;
     justify-content: center;
 }
 
-.footerlinks ul li a{
+/* Footer Link Styles */
+.footerlinks ul li a {
     font-family: Bebas Neue;
     color: white;
     margin: 20px;
@@ -338,21 +375,25 @@ html.is-rendering .transition-fade {
     transition: 0.5s;
 }
 
-.footerlinks ul li a:hover{
+/* Footer Link Hover Effects */
+.footerlinks ul li a:hover {
     opacity: 1;
     color: goldenrod;
 }
 
+/* Footer Bottom Styles */
 .footerbottom {
     background-color: rgb(35, 35, 35);
     padding: 10px;
     text-align: center;
 }
 
+/* Footer Bottom Text */
 .footerbottom p {
     color: white;
 }
 
+/* Designer Text Styles */
 .designer {
     letter-spacing: 1px;
     font-weight: 24px;

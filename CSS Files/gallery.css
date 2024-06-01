@@ -1,37 +1,43 @@
+/* Universal Styles */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body,html {
+/* Body and HTML Styles */
+body, html {
     background-color: black;
     min-height: 100vh;
     min-width: 100vw;
-    overflow:hidden;
+    overflow: hidden;
 }
 
-body h1, h2, h3 ,h4, h5 {
+/* Heading Styles */
+body h1, h2, h3, h4, h5 {
     font-family: "Bebas Neue", sans-serif;
 }
 
+/* Paragraph Styling */
 body p {
-    font-family:'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
-::-webkit-scrollbar{
+/* Scrollbar Customization */
+::-webkit-scrollbar {
     width: 10px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background: rgb(85, 85, 85);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient( orangered,gold, darkgoldenrod);
+    background: linear-gradient(orangered, gold, darkgoldenrod);
     border-radius: 50px;
 }
 
+/* Navbar Styles */
 .navbar {
     background-color: black;
     display: flex;
@@ -48,6 +54,7 @@ body p {
     display: flex;
 }
 
+/* Navbar Link Styles */
 .navbar a {
     font-family: "Bebas Neue", sans-serif;
     color: white;
@@ -60,10 +67,12 @@ body p {
     text-align: center;
 }
 
+/* Navbar Logo Styling */
 .navbar .logo-image {
     margin-left: 20px;
 }
 
+/* Navbar Link Hover Effects */
 .navbar a:hover {
     font-weight: bold;
     background: -webkit-linear-gradient(orangered, gold, darkgoldenrod);
@@ -86,27 +95,29 @@ body p {
     width: 95%;
 }
 
-.navbar span{
+/* Navbar Gradient Animation */
+.navbar span {
     position: absolute;
     bottom: 0;
     height: 5px;
     width: 1000px;
-    background: linear-gradient(90deg , transparent , goldenrod);
+    background: linear-gradient(90deg, transparent, goldenrod);
     animation: animate 2s infinite linear;
-
 }
 
+/* Keyframes for Gradient Animation */
 @keyframes animate {
-    0%{
+    0% {
         left: 0;
         transform: translate(-100%);
     }
-    100%{
+    100% {
         left: 100%;
         transform: translate(0%);
     }
 }
 
+/* Sidebar Styles */
 .sidebar {
     position: fixed;
     width: 100vh;
@@ -119,14 +130,16 @@ body p {
     z-index: 1;
 }
 
+/* Sidebar Heading Styles */
 .sidebar h1 {
     font-size: 200px;
     color: transparent;
     background: -webkit-linear-gradient(orangered, darkgoldenrod, white, goldenrod, orangered);
     -webkit-background-clip: text;
-    position: relative; 
+    position: relative;
 }
 
+/* Slider Container Styles */
 .slider {
     margin-top: 50px;
     width: 100%;
@@ -135,6 +148,7 @@ body p {
     z-index: -1;
 }
 
+/* Slider Wrapper Styles */
 .slider-wrapper {
     position: absolute;
     top: 0;
@@ -146,29 +160,33 @@ body p {
     gap: 100px;
 }
 
+/* Individual Slide Styles */
 .slide {
     width: 100%;
     height: 100%;
 }
 
+/* Slide Image Styles */
 .slide img {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
     border: 2px solid transparent;
-    border-image: linear-gradient(to right, goldenrod, white, gold, orangered); 
-    border-image-slice: 1; 
+    border-image: linear-gradient(to right, goldenrod, white, gold, orangered);
+    border-image-slice: 1;
     border-width: 5px;
 }
 
+/* Transition Effects */
 .transition-fade {
     opacity: 1;
     transition: 2s;
     transform: translateY(0);
 }
 
+/* Animation States */
 html.is-animating .transition-fade {
-    opacity:1;
+    opacity: 1;
     transform: translateY(100%);
 }
 

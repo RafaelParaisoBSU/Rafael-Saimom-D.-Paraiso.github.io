@@ -1,16 +1,17 @@
+/* Universal Styles */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 
+/* Apply smooth scrolling and snap behavior */
 html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
 
-
+/* Body styles */
 body {
     margin: 0;
     background-color: black;
@@ -18,19 +19,22 @@ body {
     overflow-x: hidden;
 }
 
+/* Heading styles */
 body h1, h2, h3 ,h4, h5 {
     font-family: "Bebas Neue", sans-serif;
 }
 
+/* Paragraph styles */
 body p {
     font-family:'Montserrat', sans-serif;
 }
 
-::-webkit-scrollbar{
+/* Scrollbar styles */
+::-webkit-scrollbar {
     width: 10px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background: rgb(85, 85, 85);
 }
 
@@ -39,9 +43,10 @@ body p {
     border-radius: 50px;
 }
 
+/* Navbar styles */
 .navbar {
-    scroll-snap-stop:normal;
-    scroll-snap-align:start;
+    scroll-snap-stop: normal;
+    scroll-snap-align: start;
     background-color: black;
     display: flex;
     align-items: center;
@@ -53,6 +58,7 @@ body p {
     transform: translateZ(0);
 }
 
+/* Navbar link styles */
 .navbar .nav-links {
     display: flex;
 }
@@ -69,10 +75,7 @@ body p {
     text-align: center;
 }
 
-.navbar .logo-image {
-    margin-left: 20px;
-}
-
+/* Navbar link hover styles */
 .navbar a:hover {
     font-weight: bold;
     background: -webkit-linear-gradient(orangered, gold, darkgoldenrod);
@@ -80,6 +83,7 @@ body p {
     -webkit-text-fill-color: transparent;
 }
 
+/* Navbar link hover animation */
 .navbar a::after {
     content: "";
     position: absolute;
@@ -95,27 +99,29 @@ body p {
     width: 95%;
 }
 
-.navbar span{
+/* Navbar scrolling animation */
+.navbar span {
     position: absolute;
     bottom: 0;
     height: 5px;
     width: 1000px;
     background: linear-gradient(90deg , transparent , goldenrod);
     animation: animate 2s infinite linear;
-
 }
 
+/* Keyframe animation for navbar scrolling */
 @keyframes animate {
-    0%{
+    0% {
         left: 0;
         transform: translate(-100%);
     }
-    100%{
+    100% {
         left: 100%;
         transform: translate(0%);
     }
 }
 
+/* Container styles */
 .container {
     position: relative;
     width: 100vw;
@@ -126,12 +132,14 @@ body p {
     align-items: center;
 }
 
+/* Slider styles */
 .slider {
     position: absolute;
     inset: 0px;
     background-color: black;
 }
 
+/* Individual slide styles */
 .slider .slides {
     top: 50%;
     left: 0%;
@@ -139,7 +147,7 @@ body p {
     position: absolute;
     width: 240px;
     height: 320px;
-    background:var(--img);
+    background: var(--img);
     background-size: cover;
     background-position: center;
     transition: 0.75s;
@@ -149,6 +157,7 @@ body p {
     align-items: flex-end;
 }
 
+/* Slide positions */
 .slider .slides:nth-child(1) {
     position: absolute;
     top: 0;
@@ -190,19 +199,19 @@ body p {
     opacity: 0;
 }
 
+/* Navigation buttons styles */
 .buttons {
     position: absolute;
     top: 800px;
     display: flex;
-    gap:20px;
-
+    gap: 20px;
 }
 
 .buttons span {
     position: relative;
     width: 50px;
     height: 50px;
-    background:black;
+    background: black;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -210,6 +219,7 @@ body p {
     border-radius: 50%;
 }
 
+/* Navigation buttons arrow styles */
 .buttons span:before {
     content: '';
     position: absolute;
@@ -234,7 +244,7 @@ body p {
     opacity: 0.5;
 }
 
-
+/* Content styles */
 .content {
     position: relative;
     padding: 40px;
@@ -247,6 +257,7 @@ body p {
     text-align: justify;
 }
 
+/* Heading styles inside content */
 .content h2 {
     font-size: 6em;
     color: transparent;
@@ -254,27 +265,32 @@ body p {
     -webkit-background-clip: text;
 }
 
+/* Paragraph styles inside content */
 .content p {
     font-size: 24px;
     color: white;
     font-weight: bold;
     text-shadow: 0px 0px 10px black;
 }
-.slider .slides:nth-child(1) .content{
+
+/* Fade-in animation for first slide content */
+.slider .slides:nth-child(1) .content {
     opacity: 1;
     transform: translateY(-150px);
     transition-delay: 0.5s;
 }
 
+/* Fade transition class */
 .transition-fade {
     opacity: 1;
     transition: 2s;
     transform: translateY(0);
 }
 
+/* Harran section styles */
 .harransection {
-    scroll-snap-stop:normal;
-    scroll-snap-align:start;
+    scroll-snap-stop: normal;
+    scroll-snap-align: start;
     text-align: center;
     display: grid;
     place-items: center;
@@ -283,13 +299,15 @@ body p {
     z-index: 999;
 }
 
-.harrancontent h1{
+/* Heading styles inside Harran section */
+.harrancontent h1 {
     font-size: 200px;
     color: white;
     text-shadow: 0px 0px 20px black;
 }
 
-.harrancontent .city{
+/* Styling for "city" text in Harran section */
+.harrancontent .city {
     font-size: 200px;
     color: transparent;
     background: linear-gradient(rgb(41, 1, 41), magenta, purple, rgb(7, 2, 7));
@@ -297,13 +315,15 @@ body p {
     text-shadow: 0px 0px 500px rgb(82, 23, 67);
 }
 
-.harrancontent h3{
+/* Heading styles inside Harran section */
+.harrancontent h3 {
     font-size: 55px;
     color: white;
     text-shadow: 0px 0px 20px black;
 }
 
-.harrancontent h3 .dangerous{
+/* Styling for "dangerous" text in Harran section */
+.harrancontent h3 .dangerous {
     font-size: 75px;
     color: transparent;
     background: linear-gradient(darkred, red, darkred, red, darkred);
@@ -311,7 +331,8 @@ body p {
     text-shadow: 0px 0px 20px rgb(170, 78, 78);
 }
 
-.harrancontent p{
+/* Paragraph styles inside Harran section */
+.harrancontent p {
     width: 75%;
     color: white;
     margin: auto;
@@ -321,13 +342,14 @@ body p {
     text-shadow: 0px 0px 20px black;
 }
 
+/* Harran slider styles */
 .harranslider {
     list-style: none;
     margin-top: 0;
 }
 
 .harranslider,
-.harranslider::after{
+.harranslider::after {
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -336,6 +358,7 @@ body p {
     left: 0;
 }
 
+/* Styles for individual slides in Harran slider */
 .harranslider li span {
     width: 100vw;
     height: 100vh;
@@ -348,58 +371,60 @@ body p {
     background-repeat: no-repeat;
     opacity: 0;
     z-index: 0;
-    animation: harran 22.5s  infinite 0s;
+    animation: harran 22.5s infinite 0s;
 }
 
-.harranslider li:nth-child(1) span{
+/* Background images for each slide in Harran slider */
+.harranslider li:nth-child(1) span {
     background-image: url(../Images/harran1.jpg);
     opacity: 1;
 }
 
-.harranslider li:nth-child(2) span{
+.harranslider li:nth-child(2) span {
     background-image: url(../Images/harran2.jpg);
     animation-delay: 7.5s;
 }
 
-.harranslider li:nth-child(3) span{
+.harranslider li:nth-child(3) span {
     background-image: url(../Images/harran3.jpg);
     animation-delay: 15s;
 }
 
-.harranslider li:nth-child(4) span{
+.harranslider li:nth-child(4) span {
     background-image: url(../Images/harran4.jpg);
     animation-delay: 22.5s;
 }
 
+/* Keyframe animation for Harran slider */
 @keyframes harran {
-0%{
-    opacity: 0;
+    0% {
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    17% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    25% {
+        opacity: 0;
+        transform: scale(0.975);
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
-8%{
-    opacity: 1;
-    transform: scale(1);
-}
-
-17%{
-    opacity: 1;
-    transform: scale(1);
-}
-
-25%{
-    opacity: 0;
-    transform: scale(0.975);
-}
-
-100% {
-    opacity: 0;
-}
-
-}
-
+/* Pilgrim content section styles */
 .pilgrimcontent {
-    scroll-snap-stop:normal;
-    scroll-snap-align:start;
+    scroll-snap-stop: normal;
+    scroll-snap-align: start;
     text-align: center;
     display: grid;
     place-items: center;
@@ -409,7 +434,8 @@ body p {
     margin-right: 25%;
 }
 
-.pilgrimcontent h1{
+/* Heading styles inside Pilgrim content section */
+.pilgrimcontent h1 {
     font-size: 200px;
     color: transparent;
     background: -webkit-linear-gradient(purple, white, violet,  rgb(30, 0, 43), rgb(30, 0, 43));
@@ -420,8 +446,8 @@ body p {
     margin-top: -15%;
 }
 
-
-.pilgrimcontent h3{
+/* Heading styles inside Pilgrim content section */
+.pilgrimcontent h3 {
     font-size: 100px;
     color: transparent;
     background: -webkit-linear-gradient(white, white, goldenrod, darkred, darkred);
@@ -430,7 +456,8 @@ body p {
     margin-top: 2.5%;
 }
 
-.pilgrimcontent p{
+/* Paragraph styles inside Pilgrim content section */
+.pilgrimcontent p {
     width: 75%;
     color: white;
     margin: auto;
@@ -440,6 +467,7 @@ body p {
     text-shadow: 0px 0px 20px black;
 }
 
+/* Image position for spike image */
 #spike-img {
     position: absolute;
     height: 100%;
@@ -448,13 +476,14 @@ body p {
     margin-right: -35%;
 }
 
+/* Pilgrim slider styles */
 .pilgrimslider {
     list-style: none;
     margin-top: 0;
 }
 
 .pilgrimslider,
-.pilgrimslider::after{
+.pilgrimslider::after {
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -463,6 +492,7 @@ body p {
     left: 0;
 }
 
+/* Styles for individual slides in Pilgrim slider */
 .pilgrimslider li span {
     width: 100vw;
     height: 100vh;
@@ -478,54 +508,54 @@ body p {
     animation: pilgrim 15s infinite 0s;
 }
 
-.pilgrimslider li:nth-child(1) span{
+/* Background images for each slide in Pilgrim slider */
+.pilgrimslider li:nth-child(1) span {
     background-image: url(../Images/pilgrim1.jpg);
     opacity: 1;
 }
 
-.pilgrimslider li:nth-child(2) span{
+.pilgrimslider li:nth-child(2) span {
     background-image: url(../Images/pilgrim2.jpg);
     animation-delay: 7.5s;
 }
 
-
-
+/* Keyframe animation for Pilgrim slider */
 @keyframes pilgrim {
-0%{
-    opacity: 0;
+    0% {
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    17% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    25% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    75% {
+        opacity: 0;
+        transform: scale(0.975);
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
-8%{
-    opacity: 1;
-    transform: scale(1);
-}
-
-17%{
-    opacity: 1;
-    transform: scale(1);
-}
-
-25%{
-    opacity: 1;
-    transform: scale(1);
-}
-
-50%{
-    opacity: 1;
-    transform: scale(1);
-}
-
-75%{
-    opacity: 0;
-    transform: scale(0.975);
-}
-
-100% {
-    opacity: 0;
-}
-
-}
-
+/* Play button styles */
 .play-button3 {
     display: grid;
     align-items: center;
@@ -540,14 +570,16 @@ body p {
     box-shadow: 0px 0px 5px 5px goldenrod;
 }
 
+/* Play button hover styles */
 .play-button3:hover {
     background-image: url(../Images/playnow2.png);
     transition: 0.5s ease;
-    box-shadow: 0px 0px 5px 5px darkgoldenrod,
+    box-shadow: 0px 0px 5px 5px darkgoldenrod;
 }
 
+/* Animation classes for transitions */
 html.is-animating .transition-fade {
-    opacity:1;
+    opacity: 1;
     transform: translateY(100%);
 }
 
@@ -561,18 +593,20 @@ html.is-rendering .transition-fade {
     transform: translateY(100%);
 }
 
+/* Footer styles */
 .footer-main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    scroll-snap-stop:normal;
-    scroll-snap-align:start;
+    scroll-snap-stop: normal;
+    scroll-snap-align: start;
     width: 100%;
     position: relative;
     z-index: 9999;
 }
 
+/* Footer text styles */
 .footertext {
     display: flex;
     justify-content: center;
@@ -583,6 +617,7 @@ html.is-rendering .transition-fade {
     margin-bottom: 10px;
 }
 
+/* Footer images styles */
 .footerimages {
     display: flex;
     justify-content: center;
@@ -596,6 +631,7 @@ html.is-rendering .transition-fade {
     height: 100px;
 }
 
+/* Social media icon styles */
 .socials {
     display: flex;
     justify-content: center;
@@ -610,7 +646,7 @@ html.is-rendering .transition-fade {
     border-radius: 100%;
 }
 
-.socials a i{
+.socials a i {
     font-size: 2em;
     color: black;
     opacity: 0.9;
@@ -621,21 +657,22 @@ html.is-rendering .transition-fade {
     transition: 0.5s;
 }
 
-.socials a:hover i{
+.socials a:hover i {
     color: white;
     transition: 0.5s;
 }
 
+/* Footer links styles */
 .footerlinks {
     margin: 10px 0;
 }
 
-.footerlinks ul{
+.footerlinks ul {
     display: flex;
     justify-content: center;
 }
 
-.footerlinks ul li a{
+.footerlinks ul li a {
     font-family: Bebas Neue;
     color: white;
     margin: 20px;
@@ -645,11 +682,12 @@ html.is-rendering .transition-fade {
     transition: 0.5s;
 }
 
-.footerlinks ul li a:hover{
+.footerlinks ul li a:hover {
     opacity: 1;
     color: goldenrod;
 }
 
+/* Footer bottom section styles */
 .footerbottom {
     background-color: rgb(35, 35, 35);
     padding: 10px;
@@ -660,6 +698,7 @@ html.is-rendering .transition-fade {
     color: white;
 }
 
+/* Designer credit styles */
 .designer {
     letter-spacing: 1px;
     font-weight: 24px;

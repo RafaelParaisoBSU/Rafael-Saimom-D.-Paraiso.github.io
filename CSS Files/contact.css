@@ -14,12 +14,12 @@ html {
 /* Body Styles */
 body {
     margin: 0;
-    height: 88vh;
+    height: 100vh;
     overflow-x: hidden;
     background: black;
     background-image: url(../Images/3.png);
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     object-fit: cover;
 }
 
@@ -133,6 +133,7 @@ body p {
 .contact {
     width: 80%;
     margin: 50px auto;
+    height: 100vh;    
 }
 
 /* Contact Box Styling */
